@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SpJxc</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= yield(:title) %></title>
+    <meta name="description" content="Tinybo">
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
+    <%= render 'layouts/ico' %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= render 'layouts/message' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+  </body>
 </html>
