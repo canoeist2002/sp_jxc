@@ -1,9 +1,11 @@
 SpJxc::Application.routes.draw do
   devise_for :users
+  resources :providers
 
-devise_scope :user do
-  root :to => "devise/sessions#new"
-end
+  devise_scope :user do
+    root :to => "devise/sessions#new"
+  end
+  
   match '/help' => 'static_page#help'
   match '/about' => 'static_page#about'
   
