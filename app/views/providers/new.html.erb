@@ -2,4 +2,18 @@
 
 <div class="row">
   <h2>创建供应商</h2>
+  <hr>
+  <%= simple_form_for @provider do |f| %>
+    <%= f.input :name, label: '供应商名称：' %>
+    <%= f.input :short, label: '简称：' %>
+    <%= f.input :address, label: '地址：' %>
+    <%= f.input :zipcode, label: '邮政编码：' %>
+    <%= f.input :telephone, label: '联系电话：' %>
+    <%= f.input :fax, label: '传真号码：' %>
+    <%= f.input :contact_person, label: '联系人：' %>
+    <%= f.input :contact_telephone, label: '联系人电话：' %>
+    <%= f.input :bank, label: '开户银行：' %>
+    <%= f.input :email, label: '电子邮箱：' %>
+    <%= f.submit '创建供应商', class: 'btn' %>
+  <% end %>
 </div>

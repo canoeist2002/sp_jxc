@@ -8,9 +8,6 @@
       <div>
         <%= f.input :email, label: 'E-mail:'  , required: true %>
         <%= f.input :password, label: '密码：', required: true %>
-        <% if devise_mapping.rememberable? -%>
-          <%= f.input :remember_me, as: :check_boxes, label: '记住我', collection: ['yes']%>
-        <% end -%>
         <div>
           <%= f.submit '登陆', class: "btn" %>
         </div>
