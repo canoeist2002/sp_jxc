@@ -3,7 +3,11 @@ SpJxc::Application.routes.draw do
   resources :providers
   resources :customers
   resources :commodities
+  resources :users
 
+  authenticated :user do
+    root :to => 'static_page#index'
+  end
   devise_scope :user do
     root :to => "devise/sessions#new"
   end

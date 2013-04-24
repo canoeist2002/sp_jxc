@@ -1,0 +1,11 @@
+<% provide(:title, '编辑用户 | 进销存管理系统') %>
+
+<div class="row">
+  <%= simple_form_for @user do |f| %>
+    <%= f.input :name, label: '用户名：' %>
+    <%= f.input :email, label: '电子邮件：' %>
+    <%= f.input :password, label: '密码：' %>
+    <%= f.input :password_confirmation, label: '确认密码：' %>
+    <%= f.submit "确认编辑", class: "btn" %>
+  <% end %>
+</div>

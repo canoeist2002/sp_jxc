@@ -1,0 +1,38 @@
+<% provide(:title, '用户管理 | 进销存管理系统') %>
+
+<div class="row">
+  <h2>用户管理</h2>
+  <hr>
+
+  <ul class="breadcrumb">
+    <li>
+      <%= link_to 'Home', root_path %>
+    </li>
+    <span class="divider">/</span>
+    <li class="active">
+      Users
+    </li>
+  </ul>
+
+  <ul class="nav nav-tabs">
+    <li class="icon index_collection_link active">
+      <a href="#">
+        <i class="icon-th-list"></i>
+        <span>List</span>
+      </a>
+    </li>
+    <li class="icon new_collection_link">
+      <a href="/users/new">
+        <i class="icon-plus"></i>
+        <span>Add new</span>
+      </a>
+    </li>
+  </ul>
+
+  <ul class="users">
+    <%= render @users %>
+  </ul>
+
+  <%= will_paginate %>
+
+</div>
