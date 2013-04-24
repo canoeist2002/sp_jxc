@@ -1,6 +1,8 @@
 SpJxc::Application.routes.draw do
   devise_for :users
   resources :providers
+  resources :customers
+  resources :commodities
 
   devise_scope :user do
     root :to => "devise/sessions#new"

@@ -11,7 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130423090343) do
+ActiveRecord::Schema.define(:version => 20130424012046) do
+
+  create_table "commodities", :force => true do |t|
+    t.string   "name"
+    t.string   "short"
+    t.string   "unit"
+    t.string   "provider_id"
+    t.string   "standard"
+    t.string   "memo"
+    t.string   "price"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "customers", :force => true do |t|
+    t.string   "name"
+    t.string   "short"
+    t.string   "address"
+    t.string   "zipcode"
+    t.string   "telephone"
+    t.string   "fax"
+    t.string   "contact_person"
+    t.string   "contact_telephone"
+    t.string   "email"
+    t.string   "bank"
+    t.string   "bankcode"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
   create_table "providers", :force => true do |t|
     t.string   "name"

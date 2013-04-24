@@ -10,7 +10,8 @@ class ProvidersController < ApplicationController
   def create
     @provider = Provider.new(params[:provider])
     if @provider.save
-      flash[:success] = "供应商创建成功！"
+      flash[:success] = "供应商信息创建成功！"
+      render 'new'
     else
       render 'new'
     end

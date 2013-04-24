@@ -1,0 +1,16 @@
+<% provide(:title, '创建商品信息 | 进销存管理系统') %>
+
+<div class="row">
+  <h2>创建商品信息</h2>
+  <hr>
+  <%= simple_form_for @commodity do |f| %>
+    <%= f.input :name, label: '商品名称：' %>
+    <%= f.input :short, label: '简称：' %>
+    <%= f.input :unit, label: '单位：' %>
+    <%= f.input :provider_id, label: '供应商：' %>
+    <%= f.input :standard, label: '规格：' %>
+    <%= f.input :price, label: '价格：' %>
+    <%= f.input :memo, label: '简介：' %>
+    <%= f.submit '创建商品', class: 'btn' %>
+  <% end %>
+</div>
